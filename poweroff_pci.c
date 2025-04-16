@@ -40,10 +40,10 @@ static int poweroff_pci_probe(struct pci_dev *pdev, const struct pci_device_id *
 	//dev_set_drvdata(&pdev->dev, vdev);
 	ret = pci_set_power_state(pdev, PCI_D3cold);
 	if (ret) {
-		dev_info(&pdev->dev, "pci powerstate set to D3cold");
+		dev_err(&pdev->dev, "error setting pci powerstate to D3cold: %d", ret);
 		goto out_put_vdev;
 	} else {
-		dev_err(&pdev->dev, "error setting pci powerstate to D3cold: %d", ret);
+		dev_info(&pdev->dev, "pci powerstate set to D3cold");
 	}
 
 	return 0;
