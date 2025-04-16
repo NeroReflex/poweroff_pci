@@ -1,5 +1,5 @@
 DRIVER := poweroff_pci
-MOD_SUBDIR = drivers/hid
+MOD_SUBDIR = drivers/pci
 
 # For building for the current running version of Linux
 ifndef TARGET
