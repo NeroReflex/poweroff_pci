@@ -66,7 +66,7 @@ static const struct pci_device_id poweroff_pci_table[] = {
 MODULE_DEVICE_TABLE(pci, poweroff_pci_table);
 
 static struct pci_driver poweroff_pci_driver = {
-	.name			= "poweroff-pci",
+	.name			= "poweroff_pci",
 	.id_table		= poweroff_pci_table,
 	.probe			= poweroff_pci_probe,
 	.remove			= poweroff_pci_remove,
